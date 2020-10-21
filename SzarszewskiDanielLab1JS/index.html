@@ -180,7 +180,20 @@
 					alert("Usunięty element z tablicy numbers to : "+removedItem)
 
 				</script>
+				<script>
+					var days = ['Pn.', 'Wt.', 'Śr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'];
+					document.write('<p>Pierwszy element to <strong>');
+					document.write(days[0] + '</strong></p>');
+					document.write('<p>Ostatni element to <strong>'+days[days.length-1] + '</strong></p>');
+					days.unshift('PONiedzielek');
+					document.write('<p>Pierwszy element po unshift to <strong>'+days[0] + '</strong></p> ');
+				</script>
+				<script>
 
+					<!-- forms zwraca listę elementów FORM z bieżącego dokumentu. Zliczone form znajdują się w zakładce kontakt, tutaj wartośc do 0.-->
+					var formsCounter = document.forms.length;
+					document.write('Ilość elementów w kolekcji forms to: '+formsCounter);
+				</script>
 			</div>
 		</div>
 	</section>

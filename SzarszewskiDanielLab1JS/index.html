@@ -135,6 +135,17 @@
 				<h1>Projekt 1</h1>
 
 				<p>Miejsce na projekt laboratoryjny</p>
+				<!--<script defer>-->
+ 				<!--var name = prompt('Jak masz na imię?', '');-->
+				<!--</script>-->
+				<!--Async powoduje, że skrypty nie wstrzymują parsowania HTML'a podczas ładowania. ... -->
+				<!--Defer również nie powoduje wstrzymania parsowania HTML'a. Różny jest jednak moment wykonania skryptów. W tym przypadku kod wykona się dopiero po zakończeniu parsowania HTML'a.-->
+
+				<script async>
+				let name= "Daniel";
+ 				document.write('<p>Ćw. 1. Witaj, ' + name + '</p>');
+				</script>
+
 
 			</div>
 		</div>

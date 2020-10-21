@@ -84,10 +84,10 @@
 				<h1>Programowanie w JAVASCRIPT</h1>
 				<div class="row">
 					<div class="col-md-2" align="left">
-						<p>nazwisko:</p>
+						<p >nazwisko:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Szarszewski</p>
+						<p id="nazwisko">Szarszewski</p>
 					</div>
 				</div>
 				<div class="row">
@@ -95,7 +95,7 @@
 						<p>imię:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Daniel Jan</p>
+						<p id="imie">Daniel Jan</p>
 					</div>
 				</div>
 				<div class="row">
@@ -103,7 +103,7 @@
 						<p>grupa:</p>
 					</div>
 					<div class="col-md-4">
-						<p>3 SN</p>
+						<p id="grupa"> </p>
 					</div>
 				</div>
 				<div class="row">
@@ -111,7 +111,7 @@
 						<p>email:</p>
 					</div>
 					<div class="col-md-4">
-						<p>19113@student.pwsz.elblag.pl</p>
+						<p id="email"> </p>
 					</div>
 				</div>
 				<div class="row">
@@ -119,7 +119,7 @@
 						<p>nr indeksu:</p>
 					</div>
 					<div class="col-md-4">
-						<p>19113</p>
+						<p id="indeks"> </p>
 					</div>
 				</div>
 
@@ -193,7 +193,54 @@
 					<!-- forms zwraca listę elementów FORM z bieżącego dokumentu. Zliczone form znajdują się w zakładce kontakt, tutaj wartośc do 0.-->
 					var formsCounter = document.forms.length;
 					document.write('Ilość elementów w kolekcji forms to: '+formsCounter);
+
+					//document.getElementById("projekt1").innerHTML = "wpisz w elemencie o id=projekt1 ten tekst";
 				</script>
+				<script> //Zadanie 4
+					document.getElementById("nazwisko").innerHTML = "Szarszewski";
+					document.getElementById("imie").innerHTML = "Daniel";
+					document.getElementById("grupa").innerHTML = "3 SN";
+					document.getElementById("email").innerHTML = "19113@student.pwsz.elblag.pl";
+					document.getElementById("indeks").innerHTML = "19113";
+				</script>
+					<p id="aka1">nowy akapit 1</p>
+					<p id="aka2">nowy akapit 2</p>
+				<script>
+					document.getElementById("aka1").innerHTML = todo[todo.length-2];
+					document.getElementById("aka2").innerHTML = todo[todo.length-1];
+					i=0;
+					n = days.length-1;
+					document.write('<br>Drukowanie polowy elementów tablicy days przy pomocy pętli while ');
+					while( i < n/2 ) {
+						i++;
+   						document.write(days[i]+", ");
+					}
+
+					document.write('<hr><br>Drukowanie polowy elementów tablicy days przy pomocy pętli for ');
+					for(i=0;i<n/2;i++){
+					document.write(days[i]+", ");
+					}
+					document.write("<hr>");
+				</script>
+				<button onclick="onclickHandler();">Kliknij tu</button>
+				<script>
+
+ 				function onclickHandler(){
+
+
+
+
+
+						n=todo.length;
+						document.write("TODO list: " + "<hr>");
+
+      					for(i=2;i<n;i++){
+							document.write("<br>"+i+". "+todo[i]+", "+"<hr>");
+						}
+					document.write('<a href="index.html">Powrót do strony głównej!</a>');
+    				}
+				</script>
+
 			</div>
 		</div>
 	</section>
@@ -204,7 +251,7 @@
 			<div class="jumbotron">
 				<h1>Projekt 2</h1>
 				
-				<p>Miejsce na projekt laboratoryjny</p>
+			
 				
 			</div>
 		</div>

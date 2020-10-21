@@ -142,10 +142,44 @@
 				<!--Defer również nie powoduje wstrzymania parsowania HTML'a. Różny jest jednak moment wykonania skryptów. W tym przypadku kod wykona się dopiero po zakończeniu parsowania HTML'a.-->
 
 				<script async>
-				let name= "Daniel";
- 				document.write('<p>Ćw. 1. Witaj, ' + name + '</p>');
+					let name= "Daniel";
+ 					document.write('<p>Ćw. 1. Witaj, ' + name + '</p>');
 				</script>
 
+
+
+				<script defer>
+					var todo = ['test', 'test', 'Zainstalować system apteczny KS-APW', 'Zainstalować OracleXE', 'Dodać schemat usera oraz kodowanie bazy', 'wolne'];
+					<!-- for(i=0;i<todo.length;i++){ -->
+					alert(todo[0]);
+				</script>
+				<script>
+					alert(todo[todo.length-1]);
+					todo[todo.length-1] = 'Zaimportować baze apteczną';
+					alert("Edit! "+todo[todo.length-1]);
+				</script>
+				<script>
+					todo[5] = 'Przeprowadzić aktualizacje oprogramowania';
+					alert(todo[todo.length-1]);
+				</script>
+				<script>
+					todo[todo.length] = 'KAWA!!!';
+					alert(todo[todo.length-1]);
+				</script>
+				<script>
+					todo.push('Podniesienie struktury bazy danych', 'Przygotowanie końcówek do pracy z serwerem', 'Testy', 'Ostatnie konfiguracje')
+
+				</script>
+				<script>
+					var numbers = [0,1,2,3];
+					var removedItem = numbers.pop();
+					alert("Wartość z 0 indeksu tablicy z tablicy numbers: "+numbers[0]);
+					<!--alert(numbers[1]);-->
+					<!--alert(numbers[2]);-->
+					alert(numbers[3]+"\nCoś poszło nie tak, element do którego się odwołujesz nie istnieje! "); <!-- ten element zostanie usunięty, powinno być undefined -->
+					alert("Usunięty element z tablicy numbers to : "+removedItem)
+
+				</script>
 
 			</div>
 		</div>

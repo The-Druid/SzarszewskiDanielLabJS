@@ -226,18 +226,17 @@
 				<script>
 
  				function onclickHandler(){
-
-
-
-
-
+						const imie = document.getElementById("imie").innerHTML;
+						const nazwisko = document.getElementById("nazwisko").innerHTML;
+						const grupa = document.getElementById("grupa").innerHTML;
+						const email = document.getElementById("email").innerHTML;
+						const indeks = document.getElementById("indeks").innerHTML;
 						n=todo.length;
-						document.write("TODO list: " + "<hr>");
+						document.write("Twoja wizytówka: " + "<hr>");
+						
+						document.write(`${imie} ${nazwisko}, <br> Grupa: ${grupa} <br> Email: ${email} <br> Nr indeksu: ${indeks}`);
 
-      					for(i=2;i<n;i++){
-							document.write("<br>"+i+". "+todo[i]+", "+"<hr>");
-						}
-					document.write('<a href="index.html">Powrót do strony głównej!</a>');
+					document.write('<br> <a href="index.html">Powrót do strony głównej!</a>');
     				}
 				</script>
 
@@ -250,8 +249,59 @@
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Projekt 2</h1>
+
+				<script>
+					var questions = [
+						[' Ile księżyców ma Ziemia?', 1],
+						[' Ile księżyców ma Saturn?', 62],
+						[' W którym roku Titanic zatonął na Oceanie Atlantyckim 15 kwietnia podczas dziewiczej podróży z Southampton?', 1912],
+						[' Jaki jest tytuł pierwszego filmu Carry On zrealizowanego i wydanego w 1958 roku?', 'Kontynuuj sierżanta'],
+						[' Jak nazywa się największa firma technologiczna w Korei Południowej?', 'Samsung'],
+						[' Który piosenkarz przewodził popowej grupie Showaddywaddy z lat 1970.?', 'Dave Bartram'],
+						[' Który holenderski zawodnik rzutek wygrał Mistrzostwa Świata BDO 2012 w Lakeside Country Club, Frimley Green 15 stycznia?', 'Christian Kist'],
+						[' Który metal odkrył Hans Christian Oersted w 1825 roku??', 'aluminium'],
+						[' Stolica Portugalii?', 'Lizbona'],
+						[' Ile oddechów wykonuje codziennie ludzkie ciało?', '20,000 XNUMX dziennie'],
+						[' Kto był premier Wielkiej Brytanii od 1841 do 1846 roku?', 'Robert Peel'],
+						[' Jaki jest symbol chemiczny srebra?', 'Ag']
+
+					];
+					n=questions.length;
+
+					//pytania
+					document.write(questions[0][0]);
+					document.write(questions[1][0]);
+					document.write(questions[2][0]);
+					//odpowiedzi
+					document.write(questions[0][1]);
+					document.write(questions[1][1]);
+					document.write(questions[2][1]);
+					const score=0;
+					for(i=0;i<n;i++){
+							const answer=questions[i][1];
+							document.write("<br>"+(i+1)+". "+questions[i][0]+"<hr>");
+							document.write(`<label><input type="radio"> ${answer} &nbsp</label>`);
+							document.write(`<label><input type="radio"> Zielony</label>`);
+							document.write(`<label><input type="radio"> Niebieski</label><hr>`);
+							document.write(`<button id="test" onclick="test();">Kliknij tu</button><hr>`);
+
+					}
+
+					function test(){
+					if (answer == question[0][1]) {
+						alert('Prawidłowa odpowiedź!');
+						score++;
+						}
+						else {
+							alert('Błąd. Prawidłowa odpowiedź to ' + question[0][1]);
+						}
+
+					}
+
+
+
+				</script>
 				
-			
 				
 			</div>
 		</div>

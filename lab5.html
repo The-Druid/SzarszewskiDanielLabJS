@@ -79,8 +79,8 @@
 						class="btn btn-primary" title="Strona główna"> <span
 							class="glyphicon glyphicon-home"></span>
 					</a></li>
-					<li><a href="#projekt1">Projekt 1</a></li>
-					<li><a href="#projekt2">Projekt 2</a></li>
+					<li><a href="index.html">Projekt 1</a></li>
+					<li><a href="lab2.html">Projekt 2</a></li>
 					<li><a href="lab3.html">Projekt 3</a></li>
 					<li><a href="lab4.html">Projekt 4</a></li>
 					<li><a href="lab5.html">Projekt 5</a></li>
@@ -96,8 +96,8 @@
 							<li><a href="#">Akcja 3</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Linki</li>
-							<li><a href="#">Projekt 1</a></li>
-							<li><a href="#">Projekt 2</a></li>
+							<li><a href="index.html">Projekt 1</a></li>
+							<li><a href="lab2.html">Projekt 2</a></li>
 							<li><a href="lab5.html">Projekt 3</a></li>
 							<li><a href="lab5.html">Projekt 4</a></li>
 							<li><a href="lab5.html">Projekt 5</a></li>
@@ -162,73 +162,12 @@
 	</section>
 	<!-- /container -->
 
-	<section id="projekt1">
+	<section id="projekt5">
 		<div class="container">
 			<div class="jumbotron">
-				<h1>Projekt 1</h1>
+				<h1>Projekt 5</h1>
 
-				<p>Miejsce na projekt laboratoryjny</p>
-				<!--<script defer>-->
- 				<!--var name = prompt('Jak masz na imię?', '');-->
-				<!--</script>-->
-				<!--Async powoduje, że skrypty nie wstrzymują parsowania HTML'a podczas ładowania. ... -->
-				<!--Defer również nie powoduje wstrzymania parsowania HTML'a. Różny jest jednak moment wykonania skryptów. W tym przypadku kod wykona się dopiero po zakończeniu parsowania HTML'a.-->
-
-				<script async>
-					let name= "Daniel";
- 					document.write('<p>Ćw. 1. Witaj, ' + name + '</p>');
-				</script>
-
-
-
-				<script defer>
-					var todo = ['test', 'test', 'Zainstalować system apteczny KS-APW', 'Zainstalować OracleXE', 'Dodać schemat usera oraz kodowanie bazy', 'wolne'];
-					<!-- for(i=0;i<todo.length;i++){ -->
-					alert(todo[0]);
-				</script>
-				<script>
-					alert(todo[todo.length-1]);
-					todo[todo.length-1] = 'Zaimportować baze apteczną';
-					alert("Edit! "+todo[todo.length-1]);
-				</script>
-				<script>
-					todo[5] = 'Przeprowadzić aktualizacje oprogramowania';
-					alert(todo[todo.length-1]);
-				</script>
-				<script>
-					todo[todo.length] = 'KAWA!!!';
-					alert(todo[todo.length-1]);
-				</script>
-				<script>
-					todo.push('Podniesienie struktury bazy danych', 'Przygotowanie końcówek do pracy z serwerem', 'Testy', 'Ostatnie konfiguracje')
-
-				</script>
-				<script>
-					var numbers = [0,1,2,3];
-					var removedItem = numbers.pop();
-					alert("Wartość z 0 indeksu tablicy z tablicy numbers: "+numbers[0]);
-					<!--alert(numbers[1]);-->
-					<!--alert(numbers[2]);-->
-					alert(numbers[3]+"\nCoś poszło nie tak, element do którego się odwołujesz nie istnieje! "); <!-- ten element zostanie usunięty, powinno być undefined -->
-					alert("Usunięty element z tablicy numbers to : "+removedItem)
-
-				</script>
-				<script>
-					var days = ['Pn.', 'Wt.', 'Śr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'];
-					document.write('<p>Pierwszy element to <strong>');
-					document.write(days[0] + '</strong></p>');
-					document.write('<p>Ostatni element to <strong>'+days[days.length-1] + '</strong></p>');
-					days.unshift('PONiedzielek');
-					document.write('<p>Pierwszy element po unshift to <strong>'+days[0] + '</strong></p> ');
-				</script>
-				<script>
-
-					<!-- forms zwraca listę elementów FORM z bieżącego dokumentu. Zliczone form znajdują się w zakładce kontakt, tutaj wartośc do 0.-->
-					var formsCounter = document.forms.length;
-					document.write('Ilość elementów w kolekcji forms to: '+formsCounter);
-
-					//document.getElementById("projekt1").innerHTML = "wpisz w elemencie o id=projekt1 ten tekst";
-				</script>
+				<p>Miejsce na projekt laboratoryjny 5</p>
 				<script> //Zadanie 4
 					document.getElementById("nazwisko").innerHTML = "Szarszewski";
 					document.getElementById("imie").innerHTML = "Daniel";
@@ -236,42 +175,7 @@
 					document.getElementById("email").innerHTML = "19113@student.pwsz.elblag.pl";
 					document.getElementById("indeks").innerHTML = "19113";
 				</script>
-					<p id="aka1">nowy akapit 1</p>
-					<p id="aka2">nowy akapit 2</p>
-				<script>
-					document.getElementById("aka1").innerHTML = todo[todo.length-2];
-					document.getElementById("aka2").innerHTML = todo[todo.length-1];
-					i=0;
-					n = days.length-1;
-					document.write('<br>Drukowanie polowy elementów tablicy days przy pomocy pętli while ');
-					while( i < n/2 ) {
-						i++;
-   						document.write(days[i]+", ");
-					}
-
-					document.write('<hr><br>Drukowanie polowy elementów tablicy days przy pomocy pętli for ');
-					for(i=0;i<n/2;i++){
-					document.write(days[i]+", ");
-					}
-					document.write("<hr>");
-				</script>
-				<button onclick="onclickHandler();">Kliknij tu</button>
-				<script>
-
- 				function onclickHandler(){
-						const imie = document.getElementById("imie").innerHTML;
-						const nazwisko = document.getElementById("nazwisko").innerHTML;
-						const grupa = document.getElementById("grupa").innerHTML;
-						const email = document.getElementById("email").innerHTML;
-						const indeks = document.getElementById("indeks").innerHTML;
-						n=todo.length;
-						document.write("Twoja wizytówka: " + "<hr>");
-						
-						document.write(`${imie} ${nazwisko}, <br> Grupa: ${grupa} <br> Email: ${email} <br> Nr indeksu: ${indeks}`);
-
-					document.write('<br> <a href="index.html">Powrót do strony głównej!</a>');
-    				}
-				</script>
+				
 
 			</div>
 		</div>

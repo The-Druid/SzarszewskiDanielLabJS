@@ -23,6 +23,33 @@
 <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 <script src="js/jquery.easing.1.3.min.js"></script>
 <script src="js/jquery.easing.compatibility.js"></script>
+<style>
+	.selected {
+  background-color: red;
+}
+
+.show-correct {
+  background-color: green;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.big-btn {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.points-container {
+  margin-top: 20px;
+}
+</style>
 
 
 </head>
@@ -277,31 +304,107 @@
 					document.write(questions[1][1]);
 					document.write(questions[2][1]);
 					const score=0;
-					for(i=0;i<n;i++){
-							const answer=questions[i][1];
-							document.write("<br>"+(i+1)+". "+questions[i][0]+"<hr>");
-							document.write(`<label><input type="radio"> ${answer} &nbsp</label>`);
-							document.write(`<label><input type="radio"> Zielony</label>`);
-							document.write(`<label><input type="radio"> Niebieski</label><hr>`);
-							document.write(`<button id="test" onclick="test();">Kliknij tu</button><hr>`);
 
-					}
+					document.write(`
+<div class="main-container">
+  <h2>Quiz</h2>
+  <div class="question-container">
+    <div class="question">
+      <p>Jakie miasto jest stolicą Francji?</p>
+      <div class="answers">
+        <button class="answer">Londyn</button>
+        <button class="answer correct">Paryż</button>
+        <button class="answer">Monachium</button>
+      </div>
+    </div>
+    <div class="question">
+      <p>Z jakiego języka pochodzi słowo <i>piżama</i>?</p>
+      <div class="answers">
+        <button class="answer">Francuski</button>
+        <button class="answer correct">Hindi</button>
+        <button class="answer">Portugalski</button>
+      </div>
+    </div>
+      <div class="question">
+      <p>Kto jako pierwszy opłynął kulę ziemską?</p>
+      <div class="answers">
+        <button class="answer">Krzysztof Kolumb</button>
+        <button class="answer">Vasco da Gama</button>
+        <button class="answer correct">Ferdynand Magellan</button>
+    </div>
+  </div>
+  <div class="points-container">
+    <button class="check-points big-btn">Sprawdzam odpowiedzi</button>
+    <div class="points hide">Punkty: <span>0</span></div>
+    <button class="show-answers big-btn">Pokaż poprawne odpowiedzi</button>
+    <button class="clear big-btn">Zagraj jeszcze raz</button>
+  </div>
+</div>
 
-					function test(){
-					if (answer == question[0][1]) {
-						alert('Prawidłowa odpowiedź!');
-						score++;
-						}
-						else {
-							alert('Błąd. Prawidłowa odpowiedź to ' + question[0][1]);
-						}
-
-					}
-
-
+`);
 
 				</script>
-				
+<script>
+	var points = 0;
+
+var answersBtns = document.querySelectorAll('.answer');
+
+var checkPointsBtn = document.querySelector('.check-points');
+
+var showCorrectAnswersBtn = document.querySelector('.show-answers');
+
+var pointsContainer = document.querySelector('.points');
+
+var pointsSpan = document.querySelector('.points span');
+
+var clearBtn = document.querySelector('.clear');
+
+var showAnswersBtn = document.querySelector('.show-answers');
+
+function addPoints() {
+  this.classList.add('selected');
+  if(this.classList.contains('correct')) {
+    points += 1;
+  }
+}
+
+function showPoints() {
+  pointsSpan.innerHTML = points;
+  pointsContainer.classList.add('show');
+}
+
+function clear() {
+  pointsContainer.classList.remove('show');
+  pointsContainer.classList.add('hide');
+
+  points = 0;
+  console.log(points);
+  for(var i = 0; i < answersBtns.length; i++) {
+    answersBtns[i].classList.remove('selected', 'show-correct');
+  }
+}
+
+function showAnswers() {
+  for(var i = 0; i < answersBtns.length; i++) {
+    answersBtns[i].classList.remove('selected');
+    if(answersBtns[i].classList.contains('correct'))     {
+     answersBtns[i].classList.add('show-correct');
+    }
+  }
+}
+
+for(var i = 0; i < answersBtns.length; i++) {
+  answersBtns[i].addEventListener('click', addPoints);
+}
+
+checkPointsBtn.addEventListener('click', showPoints);
+
+clearBtn.addEventListener('click', clear);
+
+showAnswersBtn.addEventListener('click', showAnswers);
+
+
+</script>
 				
 			</div>
 		</div>

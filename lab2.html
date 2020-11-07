@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
+<script>
+var score = 0;
+var q = 0;
+</script>
 
 <head>
 <meta charset="utf-8">
@@ -175,7 +179,71 @@
 					document.getElementById("email").innerHTML = "19113@student.pwsz.elblag.pl";
 					document.getElementById("indeks").innerHTML = "19113";
 				</script>
+
 				
+				<script>
+					var questions = [
+						[' Ile księżyców ma Ziemia?', 1],
+						[' Ile księżyców ma Saturn?', 62],
+						[' W którym roku Titanic zatonął na Oceanie Atlantyckim 15 kwietnia podczas dziewiczej podróży z Southampton?', 1912],
+						[' Jaki jest tytuł pierwszego filmu Carry On zrealizowanego i wydanego w 1958 roku?', 'Kontynuuj sierżanta'],
+						[' Jak nazywa się największa firma technologiczna w Korei Południowej?', 'Samsung'],
+						[' Który piosenkarz przewodził popowej grupie Showaddywaddy z lat 1970.?', 'Dave Bartram'],
+						[' Który holenderski zawodnik rzutek wygrał Mistrzostwa Świata BDO 2012 w Lakeside Country Club, Frimley Green 15 stycznia?', 'Christian Kist'],
+						[' Który metal odkrył Hans Christian Oersted w 1825 roku??', 'aluminium'],
+						[' Stolica Portugalii?', 'Lizbona'],
+						[' Ile oddechów wykonuje codziennie ludzkie ciało?', '20,000 XNUMX dziennie'],
+						[' Kto był premier Wielkiej Brytanii od 1841 do 1846 roku?', 'Robert Peel'],
+						[' Jaki jest symbol chemiczny srebra?', 'Ag']
+
+					];
+					n=questions.length;
+
+					
+					
+				
+				
+				</script>
+				<script>
+				function testQuestion(){
+					n=questions.length;
+					for(i=0,i<n,i++){
+					document.write(questions[i][0];
+					}
+					
+				}
+				</script>
+				<script>
+
+ 				function onclickHandler(){
+					alert("dziala?");
+					//testQuestion(questions[1][0]);
+					q++; 
+    			
+				}
+				</script>
+				<script>
+				document.write("Liczba punktów: "+score);
+				//pytania
+					document.write("<br>Pytania<br>");
+					document.write(questions[0][0]);
+					document.write("<br>");
+					document.write(questions[1][0]);
+					document.write("<br>");
+					document.write(questions[2][0]);
+					document.write("<br>");
+				//odpowiedzi
+					document.write("<br>Odpowiedzi<br>");
+					document.write(questions[0][1]);
+					document.write("<br>");
+					document.write(questions[1][1]);
+					document.write("<br>");
+					document.write(questions[2][1]);
+					document.write("<br>");
+					document.write("<br>");
+				</script>
+				<button onclick="testQuestions()">Wyświetl wszystkie pytania</button>
+				<button onclick="onclickHandler()">Następne pytanie!</button>
 
 			</div>
 		</div>

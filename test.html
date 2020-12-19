@@ -23,33 +23,6 @@
 <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 <script src="js/jquery.easing.1.3.min.js"></script>
 <script src="js/jquery.easing.compatibility.js"></script>
-<style>
-	.selected {
-  background-color: red;
-}
-
-.show-correct {
-  background-color: green;
-}
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-.big-btn {
-  display: block;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.points-container {
-  margin-top: 20px;
-}
-</style>
 
 
 </head>
@@ -75,11 +48,11 @@
 
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#main-page"
+					<li class="active"><a href="index.html"
 						class="btn btn-primary" title="Strona główna"> <span
 							class="glyphicon glyphicon-home"></span>
 					</a></li>
-					<li><a href="index.html">Projekt 1</a></li>
+					<li><a href="lab1.html">Projekt 1</a></li>
 					<li><a href="lab2.html">Projekt 2</a></li>
 					<li><a href="lab3.html">Projekt 3</a></li>
 					<li><a href="lab4.html">Projekt 4</a></li>
@@ -96,11 +69,8 @@
 							<li><a href="#">Akcja 3</a></li>
 							<li role="separator" class="divider"></li>
 							<li class="dropdown-header">Linki</li>
-							<li><a href="index.html">Projekt 1</a></li>
-							<li><a href="lab2.html">Projekt 2</a></li>
-							<li><a href="lab3.html">Projekt 3</a></li>
-							<li><a href="lab5.html">Projekt 4</a></li>
-							<li><a href="lab5.html">Projekt 5</a></li>
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
 						</ul></li>
 				</ul>
 			</div>
@@ -109,201 +79,107 @@
 
 	</nav>
 
-	<!-- Main container -->
-	<section id="main-page">
-		<div class="container">
 
-			<div class="jumbotron">
-				<h1>Programowanie w JAVASCRIPT</h1>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p >nazwisko:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="nazwisko">Szarszewski</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>imię:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="imie">Daniel Jan</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>grupa:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="grupa"> </p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>email:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="email"> </p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>nr indeksu:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="indeks"> </p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-	<!-- /container -->
-
-	<section id="projekt1">
+	<section id="projekt3">
 		<div class="container">
 			<div class="jumbotron">
-				<h1>Projekt 1</h1>
+				<h1>Projekt 3</h1>
 
 				<p>Miejsce na projekt laboratoryjny</p>
-				<!--<script defer>-->
- 				<!--var name = prompt('Jak masz na imię?', '');-->
-				<!--</script>-->
-				<!--Async powoduje, że skrypty nie wstrzymują parsowania HTML'a podczas ładowania. ... -->
-				<!--Defer również nie powoduje wstrzymania parsowania HTML'a. Różny jest jednak moment wykonania skryptów. W tym przypadku kod wykona się dopiero po zakończeniu parsowania HTML'a.-->
 
-				<script async>
-					let name= "Daniel";
- 					document.write('<p>Ćw. 1. Witaj, ' + name + '</p>');
-				</script>
-
-
-
-				<script defer>
-					var todo = ['test', 'test', 'Zainstalować system apteczny KS-APW', 'Zainstalować OracleXE', 'Dodać schemat usera oraz kodowanie bazy', 'wolne'];
-					<!-- for(i=0;i<todo.length;i++){ -->
-					alert(todo[0]);
-				</script>
-				<script>
-					alert(todo[todo.length-1]);
-					todo[todo.length-1] = 'Zaimportować baze apteczną';
-					alert("Edit! "+todo[todo.length-1]);
-				</script>
-				<script>
-					todo[5] = 'Przeprowadzić aktualizacje oprogramowania';
-					alert(todo[todo.length-1]);
-				</script>
-				<script>
-					todo[todo.length] = 'KAWA!!!';
-					alert(todo[todo.length-1]);
-				</script>
-				<script>
-					todo.push('Podniesienie struktury bazy danych', 'Przygotowanie końcówek do pracy z serwerem', 'Testy', 'Ostatnie konfiguracje')
-
-				</script>
-				<script>
-					var numbers = [0,1,2,3];
-					var removedItem = numbers.pop();
-					alert("Wartość z 0 indeksu tablicy z tablicy numbers: "+numbers[0]);
-					<!--alert(numbers[1]);-->
-					<!--alert(numbers[2]);-->
-					alert(numbers[3]+"\nCoś poszło nie tak, element do którego się odwołujesz nie istnieje! "); <!-- ten element zostanie usunięty, powinno być undefined -->
-					alert("Usunięty element z tablicy numbers to : "+removedItem)
-
-				</script>
-				<script>
-					var days = ['Pn.', 'Wt.', 'Śr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'];
-					document.write('<p>Pierwszy element to <strong>');
-					document.write(days[0] + '</strong></p>');
-					document.write('<p>Ostatni element to <strong>'+days[days.length-1] + '</strong></p>');
-					days.unshift('PONiedzielek');
-					document.write('<p>Pierwszy element po unshift to <strong>'+days[0] + '</strong></p> ');
-				</script>
-				<script>
-
-					<!-- forms zwraca listę elementów FORM z bieżącego dokumentu. Zliczone form znajdują się w zakładce kontakt, tutaj wartośc do 0.-->
-					var formsCounter = document.forms.length;
-					document.write('Ilość elementów w kolekcji forms to: '+formsCounter);
-
-					//document.getElementById("projekt1").innerHTML = "wpisz w elemencie o id=projekt1 ten tekst";
-				</script>
-				<script> //Zadanie 4
-					document.getElementById("nazwisko").innerHTML = "Szarszewski";
-					document.getElementById("imie").innerHTML = "Daniel";
-					document.getElementById("grupa").innerHTML = "3 SN";
-					document.getElementById("email").innerHTML = "19113@student.pwsz.elblag.pl";
-					document.getElementById("indeks").innerHTML = "19113";
-				</script>
-					<p id="aka1">nowy akapit 1</p>
-					<p id="aka2">nowy akapit 2</p>
-				<script>
-					document.getElementById("aka1").innerHTML = todo[todo.length-2];
-					document.getElementById("aka2").innerHTML = todo[todo.length-1];
-					i=0;
-					n = days.length-1;
-					document.write('<br>Drukowanie polowy elementów tablicy days przy pomocy pętli while ');
-					while( i < n/2 ) {
-						i++;
-   						document.write(days[i]+", ");
-					}
-
-					document.write('<hr><br>Drukowanie polowy elementów tablicy days przy pomocy pętli for ');
-					for(i=0;i<n/2;i++){
-					document.write(days[i]+", ");
-					}
-					document.write("<hr>");
-				</script>
-				<button onclick="onclickHandler();">Kliknij tu</button>
-				<script>
-
- 				function onclickHandler(){
-						const imie = document.getElementById("imie").innerHTML;
-						const nazwisko = document.getElementById("nazwisko").innerHTML;
-						const grupa = document.getElementById("grupa").innerHTML;
-						const email = document.getElementById("email").innerHTML;
-						const indeks = document.getElementById("indeks").innerHTML;
-						n=todo.length;
-						document.write("Twoja wizytówka: " + "<hr>");
-						
-						document.write(`${imie} ${nazwisko}, <br> Grupa: ${grupa} <br> Email: ${email} <br> Nr indeksu: ${indeks}`);
-
-					document.write('<br> <a href="index.html">Powrót do strony głównej!</a>');
-    				}
-				</script>
-				<script>
-
- 				function onclickHandler1(){
-						document.write('<html><head> <style>hr {color:red; background-color:yellow; height:10px;   border-collapse: collapse; width: 100%; margin:auto;} table { width:30%; margin:auto; } th, td { padding: 8px;text-align: left; border-bottom: 1px solid #ddd; margin:auto;}tr:hover {background-color:#f5f5f5;}} body{background-color:green;}</style> </head><body>    <hr>');
-						n=todo.length;
-						document.write("<center><h1>TODO list: " + (n-1)+"</h1></center><hr>");
-						
-
-      					for(i=2;i<n;i++){
-							document.write("<table>")
-							document.write("<tr><td>"+i+". "+todo[i]+", "+"</td></tr>");
-							document.write("</table>")
-						}
-					
-					document.write('<hr><a href="index.html">Powrót do strony głównej!</a>');
-					document.write('</body></html>');
-    				}
-				</script>
-				<button onclick="onclickHandler1();">test</button>
-
-			</div>
-		</div>
-	</section>
-
-
-
-
-</script>
 				
+				Pytanie: <p id="pytanie"></p>
+				
+				<form>
+
+				<input type="radio" name="odp" value="1">
+				<label for="1" id="1"></label><br>
+				<input type="radio" name="odp" value="2" id="red">
+				<label for="2" id="2"></label><br>
+				<input type="radio" name="odp" value="3">
+				<label for="3" id="3"></label><br>
+				<input type="radio" name="odp" value="4">
+				<label for="4" id="4"></label><br>
+
+				</form>
+				
+
+			
+
+				<script>
+				let score = 0; 
+				let q = 0; 
+
+				let questions = [
+					["Ile wynosi długość południka?", "15 000 km", "18 000 km", "25 000 km", "20 000 km"], 
+					["Które ze współrzędnych dotyczą Warszawy?", "52 stopni N 21 stopni E", "50 stopni N 10 stopni W", "30 stopni S 16 stopni W", "47 stopni S 22 stopni E"],
+					["Który południk stanowi granicę zmiany daty?", "270 stopni", "360 stopni", "90 stopni", "180 stopni"], 
+					["Kąt dwuścienny pomiędzy półpłaszczyzną południka 0 stopni, a dowolną półpł‚aszczyzną dowolnego południka nazywamy", "długością geograficzną", "szerokością geograficzną", "przekształceniem azymutalnym", "odwzorowaniem azymutalnym"], 
+					["Południk czasu środkowo - europejskiego przebiega w przybliżeniu po linii:", "Odry", "Renu", "Bugu", "Wisły"], 
+					["Kąt dwuścienny pomiędzy płaszczyzną równika, a promieniem ziemi przechodzącym przez określony punkt na powierzchni Ziemi nazywamy", "długością geograficzną", "odzworowaniem azymutalnym", "szerokością geograficzną", "przekształceniem azymutalnym"], 
+					["Ile wyróżniamy stref czasowych na Ziemi?", "16", "20", "24", "12"], 
+					["W jakim okresie wprowadzono kalendarz gregoriański?", "w końcu XVI wieku", "w końcu XIV wieku", "w końcu XV wieku", "w końcu XIII wieku"], 
+					["Linie biegnące od od bieguna do bieguna nazywamy:", "równikiem", "południkami", "krzywymi geograficznymi", "zwrotnikami"],
+					[""]
+				]
+
+				
+				let i = 0;
+				Nastepne_pytanie();
+
+				function Nastepne_pytanie() {
+				document.getElementById("pytanie").innerHTML = questions[i][0];
+				document.getElementById("1").innerHTML = questions[i][1];
+				document.getElementById("2").innerHTML = questions[i][2];
+				document.getElementById("3").innerHTML = questions[i][3];
+				document.getElementById("4").innerHTML = questions[i][4];
+			
+
+					
+
+				let odpowiedzi = [4,1,4,1,1,3,3,1,2];
+				let elements = document.getElementsByName("odp");
+				for(j = 0; j < elements.length; j++){
+  				 if(elements[j].checked){
+      			  	if(elements[j].value == odpowiedzi[i-1]){
+							score++;
+							licz_punkty();
+						}
+ 				  }
+				}
+
+				i++;
+
+				if(i==10){
+					alert("Test zakończony, wynik to: " +score);
+					javascript:location.reload()
+
+				}
+
+ 				}	
+
+				</script>
+
+				<br>
+				<button onclick="Nastepne_pytanie()">Następne pytanie</button>
+				<p id="punkty"></p>
+
+				<script> 
+				let message = 'Liczba punktów: ' + score; message += ' z ' + 9; message += '.'; 
+				document.getElementById("punkty").innerHTML = message;
+				function licz_punkty() {
+				let message = 'Liczba punktów: ' + score; message += ' z ' + 9; message += '.'; 
+				document.getElementById("punkty").innerHTML = message;
+				}
+				</script>
+
+
+
 			</div>
 		</div>
 	</section>
+
+
 
 	<footer>
 		<div class="container" style="margin-top: 5%">
@@ -422,10 +298,6 @@
 								</div>
 							</fieldset>
 						</form>
-						<script>
-							var formsCounter = document.forms.length;
-							document.write('Ilość elementów w kolekcji forms z zakładki kontakt to: '+formsCounter);
-						</script>
 					</section>
 				</div>
 				<div class="modal-footer">
@@ -442,7 +314,10 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
 	<script src="js/forms.js"></script>
-	
-</body>
 
+
+
+
+
+</body>
 </html>

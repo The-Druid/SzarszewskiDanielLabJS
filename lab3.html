@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Programowanie w JAVASCRIPT - template">
-<meta name="author" content="dr inż. Jacek Paluszak">
-<link rel="icon" href="img/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Programowanie w JAVASCRIPT - template">
+    <meta name="author" content="dr inż. Jacek Paluszak">
+    <link rel="icon" href="img/favicon.ico">
 
-<title>Programowanie w JAVASCRIPT</title>
+    <title>Programowanie w JAVASCRIPT</title>
 
-<!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
-<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-<link href="css/navbar-fixed-top.css" rel="stylesheet">
-<script src="js/ie-emulation-modes-warning.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+    <script src="js/ie-emulation-modes-warning.js"></script>
 
-<!-- jQuery  -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
-<script src="js/jquery.easing.1.3.min.js"></script>
-<script src="js/jquery.easing.compatibility.js"></script>
-<style>
+    <!-- jQuery  -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+    <script src="js/jquery.easing.1.3.min.js"></script>
+    <script src="js/jquery.easing.compatibility.js"></script>
+    <style>
 	.selected {
   background-color: red;
 }
@@ -49,138 +49,207 @@
 .points-container {
   margin-top: 20px;
 }
-</style>
+
+.pullquote {
+float: right;
+clear: right;
+width: 200px;
+padding: 10px;
+font-size: 20px;
+background-color: rgba(255, 211, 224, 0.5);
+border-radius: 10px;
+margin: 20px 0 10px 10px;
+font-style: italic;
+}
+
+.pq {
+color:red;
+}
+
+
+    </style>
 
 
 </head>
 
 <body>
 
-	<!-- navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
+<!-- navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"><img src="img/logoPWSZ.png"
-					height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
-					Lab</a>
-			</div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logoPWSZ.png"
+                                                  height="40" alt=""></a> <a class="navbar-brand logotext" href="#">PWSZ
+            Lab</a>
+        </div>
 
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#main-page"
-						class="btn btn-primary" title="Strona główna"> <span
-							class="glyphicon glyphicon-home"></span>
-					</a></li>
-					<li><a href="index.html">Projekt 1</a></li>
-					<li><a href="lab2.html">Projekt 2</a></li>
-					<li><a href="lab3.html">Projekt 3</a></li>
-					<li><a href="lab4.html">Projekt 4</a></li>
-					<li><a href="lab5.html">Projekt 5</a></li>
-					<li><a href="#form" data-toggle="modal"
-						data-target="#ModalForm">Kontakt</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Opcje <span class="caret"></span>
-					</a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Akcja 1</a></li>
-							<li><a href="#">Akcja 2</a></li>
-							<li><a href="#">Akcja 3</a></li>
-							<li role="separator" class="divider"></li>
-							<li class="dropdown-header">Linki</li>
-							<li><a href="index.html">Projekt 1</a></li>
-							<li><a href="lab2.html">Projekt 2</a></li>
-							<li><a href="lab5.html">Projekt 3</a></li>
-							<li><a href="lab5.html">Projekt 4</a></li>
-							<li><a href="lab5.html">Projekt 5</a></li>
-						</ul></li>
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#main-page"
+                                      class="btn btn-primary" title="Strona główna"> <span
+                        class="glyphicon glyphicon-home"></span>
+                </a></li>
+                <li><a href="index.html">Projekt 1</a></li>
+                <li><a href="lab2.html">Projekt 2</a></li>
+                <li><a href="lab3.html">Projekt 3</a></li>
+                <li><a href="lab4.html">Projekt 4</a></li>
+                <li><a href="lab5.html">Projekt 5</a></li>
+                <li><a href="#form" data-toggle="modal"
+                       data-target="#ModalForm">Kontakt</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle"
+                                        data-toggle="dropdown" role="button" aria-haspopup="true"
+                                        aria-expanded="false">Opcje <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Akcja 1</a></li>
+                        <li><a href="#">Akcja 2</a></li>
+                        <li><a href="#">Akcja 3</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Linki</li>
+                        <li><a href="index.html">Projekt 1</a></li>
+                        <li><a href="lab2.html">Projekt 2</a></li>
+                        <li><a href="lab5.html">Projekt 3</a></li>
+                        <li><a href="lab5.html">Projekt 4</a></li>
+                        <li><a href="lab5.html">Projekt 5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
 
-	</nav>
-	
-	<!-- Main container -->
-	<section id="main-page">
-		<div class="container">
+</nav>
 
-			<div class="jumbotron">
-				<h1>Programowanie w JAVASCRIPT</h1>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p >nazwisko:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="nazwisko">Szarszewski</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>imię:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="imie">Daniel Jan</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>grupa:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="grupa"> </p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>email:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="email"> </p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2" align="left">
-						<p>nr indeksu:</p>
-					</div>
-					<div class="col-md-4">
-						<p id="indeks"> </p>
-					</div>
-				</div>
+<!-- Main container -->
+<section id="main-page">
+    <div class="container">
 
-			</div>
+        <div class="jumbotron">
+            <h1>Programowanie w JAVASCRIPT</h1>
+            <div class="row">
+                <div class="col-md-2" align="left">
+                    <p>nazwisko:</p>
+                </div>
+                <div class="col-md-4">
+                    <p id="nazwisko">Szarszewski</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" align="left">
+                    <p>imię:</p>
+                </div>
+                <div class="col-md-4">
+                    <p id="imie">Daniel Jan</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" align="left">
+                    <p>grupa:</p>
+                </div>
+                <div class="col-md-4">
+                    <p id="grupa"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" align="left">
+                    <p>email:</p>
+                </div>
+                <div class="col-md-4">
+                    <p id="email"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2" align="left">
+                    <p>nr indeksu:</p>
+                </div>
+                <div class="col-md-4">
+                    <p id="indeks"></p>
+                </div>
+            </div>
 
-		</div>
-	</section>
-	<!-- /container -->
+        </div>
 
-	<section id="projekt3">
-		<div class="container">
-			<div class="jumbotron">
-				<h1>Projekt 3</h1>
+    </div>
+</section>
+<!-- /container -->
 
-				<p>Miejsce na projekt laboratoryjny 3</p>
-				<script> //Zadanie 4
+<section id="projekt3">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Projekt 3</h1>
+
+            <p>Miejsce na projekt laboratoryjny 3</p>
+            <script> //Zadanie 4
 					document.getElementById("nazwisko").innerHTML = "Szarszewski";
 					document.getElementById("imie").innerHTML = "Daniel";
 					document.getElementById("grupa").innerHTML = "3 SN";
 					document.getElementById("email").innerHTML = "19113@student.pwsz.elblag.pl";
 					document.getElementById("indeks").innerHTML = "19113";
-				</script>
 
-			</div>
-		</div>
-	</section>
+            </script>
 
 
+            <p id="message">Komunikat specjalny</p>
+
+            <p class="pq"> To jest tekst </p>
+            <p class="pullquote"> A to jest cytat</p>
+
+            <p>Lepiej zaliczać się do niektórych, niż do wszystkich.</p>
+            <span class="pq">Bądź dobrej myśli, bo po co być złej</span>
+            <p class="pq">To smutne, że głupcy są tacy pewni siebie, a ludzie rozsądni tacy pełni wątpliwości.</p>
+            <p class="pq">Nigdy nie jest za późno, by stać się tym, kim chcemy być.</p>
+            <p>Mówienie tak bardzo przeszkadza w myśleniu.</p>
+            <p class="pq">Być szczęśliwym - tego trzeba się nauczyć.</p>
+            <span class="pq">Są dwie drogi, aby przeżyć życie. Jedna to żyć tak, jakby nic nie było cudem. Druga to żyć tak, jakby cudem było wszystko.</span>
+            <span class="pq">test1</span>
+            <span class="pq">test2</span>
+            <span class="pq">test3</span>
+            <span class="pq">test4</span>
+            <script>
+					$(document).ready(function(){
+						$('span.pq').each(function() {
+							let quote = $(this).clone();
+							quote.removeClass('pq');
+							quote.addClass('pullquote');
+							$(this).before(quote);
+						}); // koniec funkcji each
+					}); // koniec funkcji ready
+
+            </script>
+			<p id="test">TEST</p>
+			<p id="menu">TEST</p>
+			<p id="testClick">TEST</p>
+			<script>
+			$('#test').click().css('color','green').hide('slow').show(3000);
+			
+			
+			</script>
+			<script>//skrypt działający w obrębie całej strony, wyświetla alert
+			let showAlert = () => {
+					alert("NO I CO KLIKASZ CZŁOWIEKU?!");
+			}
+			$('*').dblclick(showAlert);
+
+			</script>
+			
+			
+			
+			<script>
+			$('#menu').mouseover(function() {
+				$('#submenu').show();
+				}); //koniec mouseover
+			</script>
+        </div>
+    </div>
+</section>
 
 
 </script>
@@ -310,23 +379,24 @@
 							var formsCounter = document.forms.length;
 							document.write('Ilość elementów w kolekcji forms z zakładki kontakt to: '+formsCounter);
 						</script>
-					</section>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default btn-warning btn-sm"
-						data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+</section>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default btn-warning btn-sm"
+            data-dismiss="modal">Close
+    </button>
+</div>
+</div>
+</div>
+</div>
 
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
+<!-- Bootstrap core JavaScript
+================================================== -->
 
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/ie10-viewport-bug-workaround.js"></script>
-	<script src="js/forms.js"></script>
-	
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/forms.js"></script>
+
 </body>
 
 </html>

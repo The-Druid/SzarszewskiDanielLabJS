@@ -185,16 +185,13 @@ var q = 0;
 					var questions = [
 						[' Ile księżyców ma Ziemia?', 1],
 						[' Ile księżyców ma Saturn?', 62],
-						[' W którym roku Titanic zatonął na Oceanie Atlantyckim 15 kwietnia podczas dziewiczej podróży z Southampton?', 1912],
-						[' Jaki jest tytuł pierwszego filmu Carry On zrealizowanego i wydanego w 1958 roku?', 'Kontynuuj sierżanta'],
-						[' Jak nazywa się największa firma technologiczna w Korei Południowej?', 'Samsung'],
-						[' Który piosenkarz przewodził popowej grupie Showaddywaddy z lat 1970.?', 'Dave Bartram'],
-						[' Który holenderski zawodnik rzutek wygrał Mistrzostwa Świata BDO 2012 w Lakeside Country Club, Frimley Green 15 stycznia?', 'Christian Kist'],
-						[' Który metal odkrył Hans Christian Oersted w 1825 roku??', 'aluminium'],
-						[' Stolica Portugalii?', 'Lizbona'],
-						[' Ile oddechów wykonuje codziennie ludzkie ciało?', '20,000 XNUMX dziennie'],
-						[' Kto był premier Wielkiej Brytanii od 1841 do 1846 roku?', 'Robert Peel'],
-						[' Jaki jest symbol chemiczny srebra?', 'Ag']
+						[' W którym roku Titanic zatonął na Oceanie Atlantyckim 15 kwietnia podczas dziewiczej podróży z Southampton?', 1912]
+
+					];
+					var answers = [
+						[1,2,3],
+						[62,15,42],
+						[1912,1820,1763]
 
 					];
 					n=questions.length;
@@ -208,19 +205,65 @@ var q = 0;
 				function testQuestion(){
 					n=questions.length;
 					for(i=0,i<n,i++){
-					document.write(questions[i][0];
+					x=document.write(questions[i][0];
+					document.write(x);
+					if()
 					}
 					
 				}
 				</script>
 				<script>
+				let score = 0; 
+				let q = 0; 
 
- 				function onclickHandler(){
-					alert("dziala?");
-					//testQuestion(questions[1][0]);
-					q++; 
-    			
+				let questions = [
+					["Ile wynosi długość południka?", "15 000 km", "18 000 km", "25 000 km", "20 000 km"], 
+					["Które ze współrzędnych dotyczą Warszawy?", "52 stopni N 21 stopni E", "50 stopni N 10 stopni W", "30 stopni S 16 stopni W", "47 stopni S 22 stopni E"],
+					["Który południk stanowi granicę zmiany daty?", "270 stopni", "360 stopni", "90 stopni", "180 stopni"], 
+					["Kąt dwuścienny pomiędzy półpłaszczyzną południka 0 stopni, a dowolną półpł‚aszczyzną dowolnego południka nazywamy", "długością geograficzną", "szerokością geograficzną", "przekształceniem azymutalnym", "odwzorowaniem azymutalnym"], 
+					["Południk czasu środkowo - europejskiego przebiega w przybliżeniu po linii:", "Odry", "Renu", "Bugu", "Wisły"], 
+					["Kąt dwuścienny pomiędzy płaszczyzną równika, a promieniem ziemi przechodzącym przez określony punkt na powierzchni Ziemi nazywamy", "długością geograficzną", "odzworowaniem azymutalnym", "szerokością geograficzną", "przekształceniem azymutalnym"], 
+					["Ile wyróżniamy stref czasowych na Ziemi?", "16", "20", "24", "12"], 
+					["W jakim okresie wprowadzono kalendarz gregoriański?", "w końcu XVI wieku", "w końcu XIV wieku", "w końcu XV wieku", "w końcu XIII wieku"], 
+					["Linie biegnące od od bieguna do bieguna nazywamy:", "równikiem", "południkami", "krzywymi geograficznymi", "zwrotnikami"],
+					[""]
+				]
+
+				
+				let i = 0;
+				Nastepne_pytanie();
+
+				function nextQuestion() {
+				document.getElementById("pytanie").innerHTML = questions[i][0];
+				document.getElementById("1").innerHTML = questions[i][1];
+				document.getElementById("2").innerHTML = questions[i][2];
+				document.getElementById("3").innerHTML = questions[i][3];
+				document.getElementById("4").innerHTML = questions[i][4];
+			
+
+					
+
+				let odpowiedzi = [4,1,4,1,1,3,3,1,2];
+				let elements = document.getElementsByName("odp");
+				for(j = 0; j < elements.length; j++){
+  				 if(elements[j].checked){
+      			  	if(elements[j].value == odpowiedzi[i-1]){
+							score++;
+							licz_punkty();
+						}
+ 				  }
 				}
+
+				i++;
+
+				if(i==10){
+					alert("Test zakończony, wynik to: " +score);
+					javascript:location.reload()
+
+				}
+
+ 				}	
+
 				</script>
 				<script>
 				document.write("Liczba punktów: "+score);
@@ -241,9 +284,29 @@ var q = 0;
 					document.write(questions[2][1]);
 					document.write("<br>");
 					document.write("<br>");
+					
+					for(i=0;i<n;i++){
+					document.write(questions[i][0]+" <br> \n ");
+					document.write(questions[i][1]+" <br> \n ");
+					}
 				</script>
-				<button onclick="testQuestions()">Wyświetl wszystkie pytania</button>
-				<button onclick="onclickHandler()">Następne pytanie!</button>
+				
+				
+				Pytanie: <p id="pytanie"></p>
+				
+				<form>
+
+				<input type="radio" name="odp" value="1">
+				<label for="1" id="1"></label><br>
+				<input type="radio" name="odp" value="2" id="red">
+				<label for="2" id="2"></label><br>
+				<input type="radio" name="odp" value="3">
+				<label for="3" id="3"></label><br>
+				<input type="radio" name="odp" value="4">
+				<label for="4" id="4"></label><br>
+
+				</form>
+				<button onclick="nextQuestion()">Następne pytanie</button>
 
 			</div>
 		</div>

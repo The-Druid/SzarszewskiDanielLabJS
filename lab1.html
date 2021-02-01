@@ -280,9 +280,10 @@
 					document.write('<br> <a href="index.html">Powrót do strony głównej!</a>');
     				}
 				</script>
-				<div id="quiz" class="bg-danger text-white">
+				<div id="quiz" class="bg-danger text-light">
 					<hr>
 					<h1>Tutaj zobaczysz swoje wyniki!</h1>
+					<p class="bg-dark text-danger">
 				<script>
 				var questions = [
 					{
@@ -317,24 +318,35 @@
 						if(response == questions[i].answer){
 							score++;
 							alert("DOBRZE!");
-							document.writeln(i+" DOBRZE!!!!!!! "+'<br>');
+							document.writeln(" Pytanie nr "+(i+1)+"-----"+questions[i].prompt+" "+'<br>' );
+							document.writeln(" DOBRZE!!!!!!! Poprawna odpowiedź to: "+ questions[i].answer+'<br><br><br>' );
 
 						}else{
 							alert("ŹLE!!!!");
-							document.writeln(i+" ŹLE!!!!!!!\n"+'<br>');
+							document.writeln(" Pytanie nr "+(i+1)+"-----"+questions[i].prompt+" "+'<br>' );
+							document.writeln(" ŹLE!!!!!!! Poprawna odpowiedź to: "+ questions[i].answer+'<br><br><br>');
 						}
 					}
 					alert("zdobyłeś" + score + "/" + questions.length);
+					document.getElementById("results").innerHTML = score;
+					document.writeln("Zdobyłeś: "+score+" punkty"+'<br>');
 				
 				</script>
-				xd
+			</p>
+			
 				</div>
-				<button id="submit">Submit Quiz</button>
-				<div id="results"></div>
+				<button id="submit" onclick="wyniki()">Sprawdź wynik</button>
+				
 				
 				
 				<hr>
-				
+				<h1 id="wyswietl" onclick="wyniki()" >Kliknij by sprawdzić wynik!</h1>
+
+					<script>
+					function wyniki() {
+					document.getElementById("wyswietl").innerHTML = score;
+					}
+					</script>
 				
 	
 				

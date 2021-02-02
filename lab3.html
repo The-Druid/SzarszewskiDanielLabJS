@@ -232,6 +232,18 @@ color:red;
 			
 			
 			</script>
+			
+			
+			
+			<!-- ZAD 1.5 Przypisywanie zdarzenia. -->
+			<script>
+			$('#menu').mouseover(function() {
+				$('#submenu').show();
+				}); //koniec mouseover
+			</script>
+			
+			<!-- ZAD 2 Zdarzenia. -->
+			<!-- ZAD 2.1 -->
 			<script>//skrypt działający w obrębie całej strony, wyświetla alert
 			let showAlert = () => {
 					alert("NO I CO KLIKASZ CZŁOWIEKU?!");
@@ -239,14 +251,64 @@ color:red;
 			$('*').dblclick(showAlert);
 
 			</script>
-			
-			
+			<!-- ZAD 2.2 -->
+			<div class="odn">
+
+                <p class="p_odn">Najedź myszką </p>
+
+                <p class="p_odn"> tu też możesz</p>
+
+                <p class="p_odn">i tu!</p>
+            </div>
+			<script>
+				// zdarzenia
+				$('body').dblclick(function() { 
+					alert("NO!"); 
+				});
+					
+					let message ="<p>Najechano na odnośnik<p>";
+					
+				// funkcja dodaje akapit   
+				$(".p_odn").mouseover(function(){
+					
+					$(".odn").append(message);
+					});		
+
+				
+					
+			</script>
+			<button class="btn btn-success" id="guzik">Kliknij</button>
 			
 			<script>
-			$('#menu').mouseover(function() {
-				$('#submenu').show();
-				}); //koniec mouseover
+				//zmiana napisu na guziku
+				$("#guzik").click(function(){
+					$(this).text("zostałem kliknięty");
+				});
 			</script>
+
+
+
+			<script type="text/javascript">
+
+					$('a').mousedown(function()
+			
+				{
+			
+				  alert("Tak! Kursor znalazł się nad akapitem.");
+			
+				}
+			
+				</script>
+			<br>
+			<a href="index.html"> Strona Główna</a>
+			<br>
+			<a href="lab1.html"> Lab 1</a>
+			<br>
+			<a href="lab2.html"> Lab 2</a>
+
+
+			<!-- ZAD 2.2 -->
+			Dokończyć zadanie 4 z 10 buttonami
         </div>
     </div>
 </section>

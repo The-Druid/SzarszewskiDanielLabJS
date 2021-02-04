@@ -309,12 +309,117 @@ color:red;
 
 			<!-- ZAD 2.2 -->
 			Dokończyć zadanie 4 z 10 buttonami
+			
+			<div class="container"> 
+            
+            <div id="zadanie4"></div>
+
+
+			<div class="container">
+				<div class="row align-items-start">
+					<div class="col">
+						<button type="button" class="btn btn-primary" id="guzik1" >Guzik 1</button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-secondary" id="guzik2">Guzik 2</button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-success" id="guzik3">Guzik 3</button>
+					</div>
+				</div>
+				<div class="row align-items-center">
+					<div class="col">
+						<button type="button" class="btn btn-danger" id="guzik4">Guzik 4</button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-warning" id="guzik5">Guzik 5</button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-info" id="guzik6">Guzik 6</button>
+					</div>
+				</div>
+				<div class="row align-items-end">
+					<div class="col">
+						<button type="button" class="btn btn-success" id="guzik7">Guzik 7</button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-dark" id="guzik8">Guzik 8</button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-warning" id="guzik9">Guzik 9</button>
+					</div>
+					<div class="col">
+						<button type="button" class="btn btn-info" id="guzik10">Guzik 10</button>
+					</div>
+  </div>
+</div>
+<hr>
+
+			<script>
+			// zmiana styli przez klikanie w buttony
+				
+				$("#guzik1").click(function(){
+					$(this).text("1 kliknięty");
+					$("a").css("background-color", "green");
+					$("#zadanie4").append("<p>1.Nadano zielony kolor tła wszystkim linkom.</p>");
+				});
+				$("#guzik2").click(function(){
+					$(this).text("2 kliknięty");
+					$("p").css("background-color", "red");
+					$("#zadanie4").append("<p>2.Nadano czerwony kolor tła wszystkim paragrafom.</p>");
+				});
+				$("#guzik3").click(function(){
+					$(this).text("3 kliknięty");
+					$("p").css("margin-top", "50%");
+					$("#zadanie4").append("<p>3.Nadano ustawiono parametr margin-top wszystkim paragrafom.</p>");
+				});
+				$("#guzik4").click(function(){
+					$(this).text("4 kliknięty");
+					$("div").css("background-color", "black");
+					$("div").css("color", "white");
+					$("#zadanie4").append("<p>4.Nadano czarny kolor tła oraz ustawiono biały kolor tekstu wszystkim divom.</p>");
+				});
+				$("#guzik5").click(function(){
+					$(this).text("5 kliknięty");
+					$("div").css("background-color", "white");
+					$("div").css("color", "black");
+					$("#zadanie4").append("<p>5.Nadano biały kolor tła i czarny tekst wszystkim divom.</p>");
+				});
+				$("#guzik6").click(function(){
+					$(this).text("6 kliknięty");
+					$("hr").css("background-color", "red");
+					$("hr").css("height", "30px");
+					$("#zadanie4").append("<p>6.Nadano czerwony kolor tła wszystkim <hr>.</p>");
+				});
+				$("#guzik7").click(function(){
+					$(this).text("7 kliknięty");
+					$("button").css("background-color", "red");
+					$("#zadanie4").append("<p>7.Nadano czerwony kolor tła wszystkim guzikom.</p>");
+				});
+				$("#guzik8").click(function(){
+					$(this).text("8 kliknięty");
+					$("body").css("background-color", "black");
+					$("div").css("color", "black");
+					$("body").css("margin", "auto");
+					
+					$("#zadanie4").append("<p>8.Nadano czarny kolor tła strony, biały tekst w divach, ustawiono marginesy automatycznie.</p>");
+				});
+				$("#guzik9").click(function(){
+					$(this).text("9 kliknięty");
+					$("button").css("background-color", "red");
+					$("a").css("background-color", "green");
+					$("p").css("background-color", "yellow");
+					$("#zadanie4").append("<p>9.Nadano czerwony kolor tła wszystkim paragrafom, zielony odsyłaczom, a zielony akapitom </p>");
+				});
+				$("#guzik10").click(function(){
+					$(this).text("10 kliknięty");
+					$("span").css("background-color", "violet");
+					$("#zadanie4").append("<p>10.Nadano fioletowy kolor tła wszystkim <span>>.</p>");
+				});
+			</script>
         </div>
     </div>
-</section>
-
-
-</script>
+<hr> 
 				
 			</div>
 		</div>

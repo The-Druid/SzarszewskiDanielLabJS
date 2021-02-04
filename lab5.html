@@ -175,13 +175,41 @@
 					document.getElementById("email").innerHTML = "19113@student.pwsz.elblag.pl";
 					document.getElementById("indeks").innerHTML = "19113";
 				</script>
-				
+				<h2 class="question">Jak zapisać się na studia w PWSZ w Elblągu?</h2>
+				<h4 class="answer">odpowiedź</h4>
+				<h2 class="question">Ile trzeba uzyskać punktów, żeby się dostać na poszczególne kierunki?</h2>
+				<h4 class="answer">odpowiedź</h4>
+				<h2 class="question">Czy jeśli nie zdawałem Historii, Matematyki czy Geografii - czyli przedmiotów (P1), to mam jakiekolwiek szansę na dostanie się na studia?</h2>
+				<h2 class="question">Ile wynosi opłata rekrutacyjna?</h2>
+				<h2 class="question">Czy można składać podanie na więcej niż jeden kierunek/specjalność?</h2>
+				<h2 class="question">Czy student 1 roku może wyjechać na studia lub praktyki zagraniczne?</h2>
+				<h2 class="question">Ile kosztuje akademik?</h2>
+				<h2 class="question">Ile wynosi stypendium?</h2>
+				<h2 class="question">Do jakiego lekarza mam się udać po zaświadczenie i czy jest specjalny druk, na którym powinno być wystawione?</h2>
+				<h2 class="question">Czy przy wyliczaniu punktów, któryś z 3 przedmiotów konkursowych oznaczonych jako (P1) jest ważniejszy niż inny? Czy np. składając podanie na Administrację, ten kto wybrał Matematykę ma większe szanse od tego, który wybrał Geografię?</h2>
+				<h2 class="question">Ile kosztują studnia zaoczne?</h2>
+				<h2 class="question">Czy studia podyplomowe Informatyka dla nauczycieli są przeznaczone tylko dla osób z wykształceniem pedagogicznym, czy inne osoby również mogą podjąć te studia?</h2>
+				<h2 class="question">Czy można się odwołać od decyzji o nieprzyjęciu na studia?</h2>
+				<h2 class="question">Czy gdy się nie dostanie na studia można zostać „wolnym słuchaczem”?</h2>
+				<h2 class="question">Kiedy zaczyna się nabór?</h2>
 
 			</div>
 		</div>
 	</section>
 
-
+			<script>
+				$("h2").click(function(){
+				$(".answer").hide();
+				
+				$("#zmiany").append("<p>10.Odukrywam diva.</p>");
+				$guz10=$guz10+1;
+				if($guz10>1){
+					$(this).text("10.Odukrywam diva.");
+					$("#odukryj").css("color", "white");
+					$guz10=0;
+				}
+			});
+			</script>
 
 
 </script>

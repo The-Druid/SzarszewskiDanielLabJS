@@ -296,12 +296,26 @@
 				$(this).text("3 kliknięty");
 				$("tr:even").css("background-color", "gray");
 				$("#zadanie4").append("<p>3.Koloruje przyste wiersze na szaro.</p>");
+				$guz3=$guz3+1;
+				if($guz3>1){
+					$(this).text("3.Koloruje przyste wiersze na szaro");
+					$("tr:even").css("background-color", "white");
+					
+					$guz3=0;
+				}
 			});
 			$("#guzik4").click(function(){
 				$(this).text("4 kliknięty");
 				$("tr:odd").css("background-color", "blue");
 				$("tr:odd").css("color", "white");
 				$("#zadanie4").append("<p>4.Koloruje nieprzyste wiersze na niebiesko.</p>");
+				$guz4=$guz4+1;
+				if($guz4>1){
+					$(this).text("4.Koloruje nieprzyste wiersze na niebiesko.");
+					$("tr:odd").css("background-color", "white");
+					
+					$guz4=0;
+				}
 			});
 			$("#guzik5").click(function(){
 				$(this).text("5 kliknięty");

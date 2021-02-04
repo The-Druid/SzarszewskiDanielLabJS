@@ -161,7 +161,7 @@
 				</div>
 
 			</div>
-			<p>TEST AKAPITUUUUUUUUUUUU</p>
+			<p id="zmiany">WYŚWIETLACZ ZMIAN</p>
 		</div>
 	</section>
 	<!-- /container -->
@@ -192,26 +192,31 @@
 				  </tr>
 				  <tr>
 					<th scope="row">3</th>
-					<td>Larry</td>
+					<td><a class="test1">test guzik 7</a></td>
 					<td>the Bird</td>
-					<td>@twitter</td>
+					<td><a class="test">test guzik 7 i 8</a></td>
+				  </tr>
+				  <tr>
+					<th scope="row">3</th>
+					<td><a>test</a></td>
+					<td><p>TEST AKAPITUUUUUUUUUUUU</p></td>
+					<td><a href="lab4.html">test</a></td>
 				  </tr>
 				  <tr>
 					<th scope="row">3</th>
 					<td>Larry</td>
 					<td>the Bird</td>
-					<td>@twitter</td>
-				  </tr>
-				  <tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
+					<td><br> 
+						<a>TEST</a></td>
 				  </tr>
 				</tbody>
 			  </table>
 			<hr> 
 			<a>TEST</a>
+			<p color="blue">test kolor niebieski</p>
+			<p style="color:blue">test kolor niebieski</p>
+			<a href="https://www.w3schools.com/html/html_css.asp">Poza strone</a>
+			<a href="https://www.github.com">Poza strone</a>
 
 			<hr>
 			<a>TEST button 6</a>
@@ -233,26 +238,30 @@
 						<button type="button" class="btn btn-danger" id="guzik4">4.Koloruje nieprzyste wiersze na niebiesko</button>
 					</div>
 					<div class="col">
-						<button type="button" class="btn btn-warning" id="guzik5">5.Wszystkie p w body na kolor czerwony</button>
+						<button type="button" class="btn btn-warning" id="guzik5">5.Wszystkie p w td na kolor czerwony</button>
 					</div>
 					<div class="col">
-						<button type="button" class="btn btn-info" id="guzik6">6.Zmieniam wszystkie a po hr.</button>
+						<button type="button" class="btn btn-info" id="guzik6">6.Zmieniam wszystkie a po br.</button>
 					</div>
 				</div>
-				<div class="row align-items-end">
+				<div class="row align-items-end"  >
 					<div class="col">
-						<button type="button" class="btn btn-success" id="guzik7">Guzik 7</button>
+						<button type="button" class="btn btn-success" id="guzik7">7.Nadaje żółty kolor odnośnikom nie należącym do klasy test.</button>
 					</div>
 					<div class="col">
-						<button type="button" class="btn btn-dark" id="guzik8">Guzik 8</button>
+						<button type="button" class="btn btn-dark" id="guzik8">8.Nadaje czerwony kolor odnośnikom należącym do klasy test.</button>
 					</div>
 					<div class="col">
-						<button type="button" class="btn btn-warning" id="guzik9">Guzik 9</button>
+						<button type="button" class="btn btn-warning" id="guzik9" hidden>9.Nadaje fioletowy kolor odnośnikom należącym zawierającym słowo test.</button>
 					</div>
 					<div class="col">
-						<button type="button" class="btn btn-info" id="guzik10">Guzik 10</button>
+						<button type="button" class="btn btn-info" id="guzik10">10. Odukrywam diva</button>
+					</div>
+					<div class="row align-items-end"  hidden>
+						<p id="odukryj">ukryty div</p>
 					</div>
 				</div>
+				
 				</div>
 		</div>
 	</section>
@@ -266,7 +275,7 @@
 				$(this).text("1 kliknięty");
 				$("#el1").css("background-color", "green");
 				$("#el1").css("color", "yellow");
-				$("#projekt2").append("<p>1.Komórka 1 na zielono-zółty.</p>");
+				$("#zmiany").append("<p>1.Komórka 1 na zielono-zółty.</p>");
 				$guz1=$guz1+1;
 				if($guz1>1){
 					$(this).text("1.Komórka 1 na zielono-zółty");
@@ -282,7 +291,7 @@
 				$(this).text("2 kliknięty");
 				$("#el2").css("background-color", "blue");
 				$("#el2").css("color", "white");
-				$("#zadanie4").append("<p>2.Komórka 1 na niebiesko-biały.</p>");
+				$("#zmiany").append("<p>2.Komórka 1 na niebiesko-biały.</p>");
 				$guz2=$guz2+1;
 				if($guz2>1){
 					$(this).text("2.Komórka 2 na niebiesko-biały");
@@ -295,7 +304,7 @@
 			$("#guzik3").click(function(){
 				$(this).text("3 kliknięty");
 				$("tr:even").css("background-color", "gray");
-				$("#zadanie4").append("<p>3.Koloruje przyste wiersze na szaro.</p>");
+				$("#zmiany").append("<p>3.Koloruje przyste wiersze na szaro.</p>");
 				$guz3=$guz3+1;
 				if($guz3>1){
 					$(this).text("3.Koloruje przyste wiersze na szaro");
@@ -308,7 +317,7 @@
 				$(this).text("4 kliknięty");
 				$("tr:odd").css("background-color", "blue");
 				$("tr:odd").css("color", "white");
-				$("#zadanie4").append("<p>4.Koloruje nieprzyste wiersze na niebiesko.</p>");
+				$("#zmiany").append("<p>4.Koloruje nieprzyste wiersze na niebiesko.</p>");
 				$guz4=$guz4+1;
 				if($guz4>1){
 					$(this).text("4.Koloruje nieprzyste wiersze na niebiesko.");
@@ -319,43 +328,80 @@
 			});
 			$("#guzik5").click(function(){
 				$(this).text("5 kliknięty");
-				$('body > p').css("color","red");
-				$("#zadanie4").append("<p>5.wszystkie p w body na kolor czerwony</p>");
+				$('td > p').css("color","red");
+				$("#zmiany").append("<p>5.wszystkie p w td na kolor czerwony.</p>");
+				$guz5=$guz5+1;
+				if($guz5>1){
+					$(this).text("5.wszystkie p w td na kolor czerwony.");
+					$('td > p').css("color", "black");
+					
+					$guz5=0;
+				}
 			});
 			$("#guzik6").click(function(){
 				$(this).text("6 kliknięty");
-				$('hr + a').css("background-color","red");
-				$("#zadanie4").append("<p>6.Zmieniam wszystki <a> po <hr>.</p>");
+				$('br + a').css("background-color","red");
+				$("#zmiany").append("<p>6.Zmieniam wszystkie a po br.</p>");
+				$guz6=$guz6+1;
+				if($guz6>1){
+					$(this).text("6.Zmieniam wszystki a po br.");
+					$('br + a').css("background-color", "white");
+					
+					$guz6=0;
+				}
 			});
+			
 			$("#guzik7").click(function(){
 				$(this).text("7 kliknięty");
-				$("button").css("background-color", "red");
-				$("#zadanie4").append("<p>7.Nadano czerwony kolor tła wszystkim guzikom.</p>");
+				$('a:not(.test)').css("color","yellow")
+				
+				$("#zmiany").append("<p>7.Nadaje żółty kolor odnośnikom nie należącym do klasy test.</p>");
+				$guz7=$guz7+1;
+				if($guz7>1){
+					$(this).text("7.Nadaje żółty kolor odnośnikom nie należącym do klasy test.");
+					$('a:not(.test)').css("color", "black");
+					
+					$guz7=0;
+				}
 			});
+
 			$("#guzik8").click(function(){
 				$(this).text("8 kliknięty");
-				$("body").css("background-color", "black");
-				$("div").css("color", "black");
-				$("body").css("margin", "auto");
-				
-				$("#zadanie4").append("<p>8.Nadano czarny kolor tła strony, biały tekst w divach, ustawiono marginesy automatycznie.</p>");
+				$('a.test').css("color","red")
+				$("#zmiany").append("<p>8.Nadaje czerwony kolor odnośnikom należącym do klasy test.</p>");
+				$guz8=$guz8+1;
+				if($guz8>1){
+					$(this).text("8.Nadaje czerwony kolor odnośnikom należącym do klasy test.");
+					$('a.test').css("color", "black");
+					$guz8=0;
+				}
 			});
 			$("#guzik9").click(function(){
 				$(this).text("9 kliknięty");
-				$("button").css("background-color", "red");
-				$("a").css("background-color", "green");
-				$("p").css("background-color", "yellow");
-				$("#zadanie4").append("<p>9.Nadano czerwony kolor tła wszystkim paragrafom, zielony odsyłaczom, a zielony akapitom </p>");
+				$('a:contains("test")').css("color","violet")
+				$("#zmiany").append("<p>9.Nadaje fioletowy kolor odnośnikom należącym zawierającym słowo test.</p>");
+				$guz9=$guz9+1;
+				if($guz9>1){
+					$(this).text("9.Nadaje fioletowy kolor odnośnikom należącym zawierającym słowo test.");
+					$('a:contains("test")').css("color","black")
+					$guz9=0;
+				}
 			});
 			$("#guzik10").click(function(){
 				$(this).text("10 kliknięty");
-				$("span").css("background-color", "violet");
-				$("#zadanie4").append("<p>10.Nadano fioletowy kolor tła wszystkim <span>>.</p>");
+				$('div:hidden').show(); 
+				$("#zmiany").append("<p>10.Odukrywam diva.</p>");
+				$guz10=$guz10+1;
+				if($guz10>1){
+					$(this).text("10.Odukrywam diva.");
+					$("#odukryj").css("color", "white");
+					$guz10=0;
+				}
 			});
 		</script>
 
 	<section id="projekt2">
-		<div class="container">
+		<div class="container" id="zadanie4">
 			<hr>
 			
 			<br>
